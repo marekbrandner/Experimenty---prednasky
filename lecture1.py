@@ -3,6 +3,16 @@
 #import numpy
  
 
+def sinus(x,deltax):
+    import numpy as np
+    y = np.sin(x)
+    deltay = np.sin(x+deltax) - np.sin(x)
+    Cp = np.abs(deltay) * np.abs(x) / np.abs(y) / np.abs(deltax)
+    print("Cislo podminenosti: ")
+    print(Cp)
+    Cp_approx = np.abs(x / np.tan(x))
+    print(Cp_approx)
+
 def residuum(n):
 
     from scipy import linalg
